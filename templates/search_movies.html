@@ -5,5 +5,10 @@
 {% block body %}
 <h1 class="mb-5">Search Movie Ratings</h1>
 <p class="mb-3">Search for a movie rating below</p>
-<!-- TODO: Feature 3 -->
+<form action = "http://127.0.0.1:5000/movies/search" method = "post">
+    <p><input type="text" class="form-control" id="query" name="query" placeholder="movie"></p>
+    <p><input type="submit" id="submit" class="btn btn-primary" value="Submit"></p>
+</form>
+<p>Result : {{ result }} </p>
+
 {% endblock %}
